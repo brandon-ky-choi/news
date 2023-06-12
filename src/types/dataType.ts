@@ -78,6 +78,18 @@ interface ArticleHeadline {
   default: string;
 }
 
+interface ArticleStandfirst {
+  default: string;
+}
+
+interface ArticleRelatedThumbnails {
+  default: string[];
+}
+
+interface ArticleRelated {
+  thumbnail: ArticleRelatedThumbnails;
+}
+
 export interface Article {
   id: string;
   link: Link;
@@ -95,6 +107,8 @@ export interface Article {
   rightsMetadata: RightsMetadata;
   target: Target;
   headline: ArticleHeadline;
+  standfirst: ArticleStandfirst;
+  related: ArticleRelated;
 }
 
 export interface DataResponse {
