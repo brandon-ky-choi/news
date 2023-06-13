@@ -1,0 +1,19 @@
+.article {
+  padding: 1em;
+  height: 100%;
+  flex-grow: 1;
+  h3 {
+    margin-top: 0;
+  }
+  &__box {
+    width: 100%;
+  }
+  &__standfirst {
+    p {
+      margin-top: 0;
+    }
+  }
+  &__thumbnail {
+    max-width: 100%;
+  }
+}
