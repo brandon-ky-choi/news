@@ -90,6 +90,24 @@ interface ArticleRelated {
   thumbnail: ArticleRelatedThumbnails;
 }
 
+interface ImageLink {
+  self: string;
+  media: string;
+}
+
+export interface ArticleImage {
+  id: string;
+  type: string;
+  aspectRatio: string;
+  width: number;
+  height: number;
+  link: ImageLink;
+}
+
+interface ImageObject {
+  [key: string]: ArticleImage;
+}
+
 export interface Article {
   id: string;
   link: Link;
@@ -109,6 +127,7 @@ export interface Article {
   headline: ArticleHeadline;
   standfirst: ArticleStandfirst;
   related: ArticleRelated;
+  references: ImageObject;
 }
 
 export interface DataResponse {
